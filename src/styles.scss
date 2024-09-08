@@ -1,0 +1,265 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+@keyframes scale {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes scale2 {
+    0%{
+        transform: scale(1.2);
+    }
+    50%{
+        transform: scale(0.4);  
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+ .card.text:not(:hover){
+        z-index: -1;
+    }
+    .card.text:hover {
+       
+        box-shadow: -3px -5px 20px 15px #000000ed !important;
+        
+  z-index: 3;
+}
+body.hover{
+    .card.text:not(:hover){
+        z-index: -1;
+    }
+    .card.text:hover {
+        .btn {
+            animation-name: scale2;
+            animation-duration: 4s;
+            animation-iteration-count: 1000;
+        }
+    box-shadow: -3px -5px 20px 16px !important;
+    animation-name: scale;
+  animation-duration: 4s;
+  animation-iteration-count: 1000;
+  z-index: 3;
+}
+}
+.normala{
+    text-decoration:auto
+}
+.ep-e {
+    background-image: url(http://timetoknow.github.io/emoji-panel/dist/asset/sheet_emojione_32.png) !important;
+}
+
+body.blue {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: #009DDB !important;
+}
+
+body.black {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: #19191a !important;
+    color: white;
+}
+
+body {
+    padding-top: 100px;
+
+    overflow-x: hidden !important;
+}
+
+body.red {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: #800000 !important;
+    color: white;
+}
+
+body.green {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: #248700 !important;
+}
+
+
+// ////////////////////////////////////
+body.crimson {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: crimson !important;
+}
+
+body.greenyellow {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: greenyellow !important;
+}
+
+body.grey {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: grey !important;
+}
+
+body.aqua {
+    overflow-x: hidden !important;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+    background-color: aqua !important;
+}
+
+body.crimson .text-center .text,
+body.crimson .card,
+body.crimson .card .card-block,
+body.crimson .mat-mdc-menu-panel {
+    background-color: crimson !important;
+}
+
+body.greenyellow .text-center .text,
+body.greenyellow .card,
+body.greenyellow .card .card-block,
+body.greenyellow .mat-mdc-menu-panel {
+    background-color: greenyellow !important;
+    color: rgb(0, 0, 0);
+}
+
+body.grey .text-center .text,
+body.grey .card,
+body.grey .card .card-block,
+body.grey .mat-mdc-menu-panel {
+    background-color: grey !important;
+    color: white;
+}
+
+body.aqua .text-center .text,
+body.aqua .card,
+body.aqua .card .card-block,
+body.aqua .mat-mdc-menu-panel {
+    background-color: aqua !important;
+
+}
+
+body.blue .text-center .text,
+body.blue .card,
+body.blue .card .card-block,
+body.blue .mat-mdc-menu-panel {
+    background-color: #009DDB !important;
+}
+
+.tox-notifications-container {
+    display: none !important;
+}
+
+body.black .text-center .text,
+body.black .card,
+body.black .card .card-block,
+body.black .mat-mdc-menu-panel {
+    background-color: #19191a !important;
+    color: white;
+}
+
+body.red .text-center .text,
+body.red .card,
+body.red .card .card-block,
+body.red .mat-mdc-menu-panel {
+    background-color: #800000 !important;
+}
+
+body.green .text-center .text,
+body.green .card,
+body.green .card .card-block,
+body.green .mat-mdc-menu-panel {
+    background-color: #248700 !important;
+}
+
+body.f-1 {
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+body.f-2 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+body.f-3 {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.mat-mdc-menu-content {
+    margin: 0;
+    padding: 10px 27px !important;
+    list-style-type: none;
+}
+nav {
+    font-size: 1rem !important;
+}
+
+strong {
+    cursor: pointer;
+
+}
+
+.h5,
+h5 {
+    font-size: 1.25rem !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0px 0px 5px 3px;
+    background-color: rgb(0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 4px;
+    -webkit-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset 0px 0px 5px 3px;
+    background-color: rgb(0, 0, 0);
+}
+
+*,
+button,
+div {
+    transition: .2s all ease-in-out;
+}
+
+
+
+
+::selection {
+    color: #ffffff;
+    background: rgb(0, 76, 66);
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+
+}

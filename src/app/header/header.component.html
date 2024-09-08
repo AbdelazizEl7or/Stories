@@ -1,0 +1,72 @@
+<nav class="navbar bg-dark navbar-expand-lg " style="position: fixed;
+z-index: 100;
+top: 0;
+width: 100%;" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">storys</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <mat-icon>more_vert</mat-icon>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
+        </li>      
+      </ul>
+      <div _ngcontent-por-c45="" class="nav-item" style="
+            height: 43px;
+        "><img
+          src="https://img.icons8.com/external-flaticons-flat-flat-icons/200/external-morning-morning-flaticons-flat-flat-icons-4.png"
+          style="height: 100%;" #i (load)=" img(i)"></div>
+      <button class="btn btn-dark" mat-icon-button [matMenuTriggerFor]="menu" aria-label="">
+        <mat-icon>settings</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <label id="example-radio-group-label">اختر لون</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="color">
+          <mat-radio-button (click)="l()" class="example-radio-button" *ngFor="let color of colors" [value]="color">
+
+            <div [style.backgroundColor]=" color" style="color:azure;width: 40px;
+                        height: 40px;
+                        padding-top: 8px;
+                        padding-left: 3px;"></div>
+          </mat-radio-button>
+        </mat-radio-group>
+        <div>{{color}}</div>
+        <label id="example-radio-group-label">اختر حجم الخط</label>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="font">
+          <mat-radio-button (click)="f()" class="example-radio-button" [value]="1">
+
+            <div style="color:azure;width: 40px;
+                        height: 40px;
+                        padding-top: 8px;
+                        padding-left: 3px;">1</div>
+          </mat-radio-button>
+          <mat-radio-button (click)="f()" class="example-radio-button" [value]="2">
+
+            <div style="color:azure;width: 40px;
+                        height: 40px;
+                        padding-top: 8px;
+                        padding-left: 3px;">2</div>
+          </mat-radio-button>
+          <mat-radio-button (click)="f()" class="example-radio-button" [value]="3">
+
+            <div style="color:azure;width: 40px;
+                        height: 40px;
+                        padding-top: 8px;
+                        padding-left: 3px;">3</div>
+          </mat-radio-button>
+        </mat-radio-group>
+
+      </mat-menu>
+
+      <!-- <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> -->
+    </div>
+  </div>
+</nav>

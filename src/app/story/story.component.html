@@ -1,0 +1,87 @@
+<div style="position: fixed; right: 16px; top: 56px;" class="btn-group" dropdown>
+    <button type="button" class="btn btn-danger" (click)="save()"><img
+            src="https://img.icons8.com/cotton/2x/bookmark-documents--v6.png" style="width: 20px;" alt="">
+        <div *ngIf="saved">scroll saved!</div>
+    </button>
+    <button id="button-split" type="button" dropdownToggle class="btn btn-danger dropdown-toggle dropdown-toggle-split"
+        aria-controls="dropdown-split">
+        <span class="caret"></span>
+        <span class="sr-only visually-hidden">Split button!</span>
+    </button>
+    <ul id="dropdown-split" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-split">
+
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><button class="dropdown-item" routerLink="">home</button></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><button class="dropdown-item" (click)="up()">up</button></li>
+    </ul>
+</div>
+
+<div @fadeIn #all class="text-center" *ngIf="story">
+    <img class="image" [attr.src]="story.image" style="width:200px; height: 200px;" alt="">
+    <h1 class="name">{{story.name}}</h1>
+    <p class="dis">{{story.dis}}</p>
+    <div class="text" (load)="int(template,$event)" (click)="openModal(template,$event);" style="
+    padding-right: 47px;
+    padding-left: 47px;
+    border: 2px solid;
+    box-shadow: 4px 0px 20px 4px;
+ 
+" [innerHTML]="safeHtml(story.html)">
+
+    </div>
+</div>
+<br>
+<div *ngIf="pazzle">
+
+    <p style="direction: rtl;font-size: 21px;">مسودة لترتيب أفكارك وحل اللغز</p>
+
+    <div class="d-flex">
+        <button (click)="ansring()" class="btn btn-info">الأجابة</button>
+        <editor style="width: 100%;" #text [init]="{
+            selector: 'textarea',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+            mergetags_list: [
+              { value: 'First.Name', title: 'First Name' },
+              { value: 'Email', title: 'Email' },
+            ]
+          }
+        " apiKey="89c51c58p70oy0ls4vs7s2b4liwgbj97c7gybze7adki9esi">
+        </editor>
+    </div>
+</div>
+<div *ngIf="!story" class="d-flex justify-content-center text-info">
+    <div *ngIf="!not" class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+
+    </div>
+
+    <div *ngIf="not" class="bg-info text-center text-black">
+        not found
+    </div>
+</div>
+<div class="text-center" style="padding-left:60px ;padding-right:60px ;" *ngIf="!story">
+    <br>
+    <div *ngIf="!not" class="progress" dir="rtl" role="progressbar" aria-label="Animated striped example"
+        [attr.aria-valuenow]="v" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" [style.width]="v">
+            {{v}}
+        </div>
+    </div>
+</div>
+
+
+<ng-template #template>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">(*)</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body" dir="rtl" style="font-size: 30px; color: black;">
+        {{mod}}
+    </div>
+</ng-template>
